@@ -10,6 +10,18 @@ include(hunter_configuration_types)
 include(hunter_download)
 include(hunter_pick_scheme)
 include(hunter_report_broken_package)
+include(hunter_source_subdir)
+
+hunter_add_version(
+    PACKAGE_NAME
+    LLVM
+    VERSION
+    "11.0.1"
+    URL
+    "https://github.com/llvm/llvm-project/archive/llvmorg-11.0.1.tar.gz"
+    SHA1
+    99290C28654EFE520247B7859ED45CF7BC895641
+)
 
 hunter_add_version(
     PACKAGE_NAME
@@ -87,6 +99,10 @@ hunter_add_version(
     SHA1
     c5287384d0b95ecb0fd7f024be2cdfb60cd94bc9
 )
+
+if(HUNTER_LLVM_VERSION VERSION_GREATER 6.0.1)
+    hunter_source_subdir(LLVM SOURCE_SUBDIR llvm)
+endif()
 
 hunter_cmake_args(
   LLVM
