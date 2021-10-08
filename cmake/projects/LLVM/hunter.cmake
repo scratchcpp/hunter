@@ -16,6 +16,17 @@ hunter_add_version(
     PACKAGE_NAME
     LLVM
     VERSION
+    "13.0.0"
+    URL
+    "https://github.com/llvm/llvm-project/archive/llvmorg-13.0.0.tar.gz"
+    SHA1
+    807949B6C957B1D93B707DB45CB6E7DFFC886FA1
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    LLVM
+    VERSION
     "12.0.1"
     URL
     "https://github.com/llvm/llvm-project/archive/llvmorg-12.0.1.tar.gz"
