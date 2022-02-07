@@ -105,7 +105,12 @@ config file (``boost/config/user.hpp``):
   
   - `Boost-log <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log/CMakeLists.txt>`__
   
-  - `Boost-log-usingBoostConfig <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log-usingBoostConfig/CMakeLists.txt>`__
+  - `Boost-log-useBoostConfig <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log-useBoostConfig/CMakeLists.txt>`__
+
+- Option ``BOOST_BUILD_DYNAMIC_VSRUNTIME=OFF`` use on Windows to build the boost libraries with the static runtime.
+
+  Should be used together with ``USE_CONFIG_FROM_BOOST=ON``.
+  Otherwise the generated library filenames won't be found by the provided ``FindBoost.cmake`` module.
 
 
 Python
